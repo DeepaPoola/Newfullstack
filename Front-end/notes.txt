@@ -1,0 +1,71 @@
+1.description list
+<dl>
+        <dt>chicken</dt>
+        <dd>biryani</dd>
+        <dt>Mutton</dt>
+        <dd>biryani</dd>
+      </dl>
+
+2. summary
+<aside>
+        <details>
+            <summary>Guess the number of hours</summary>
+            <ul>
+                <li>
+                    <p>Started at 8am</p>(with dots)
+                    Started at 8am(without dots)
+                </li>
+            </ul>
+            
+        </details>
+      </aside>
+
+      (or)
+
+  <details>
+            <summary>Guess the number of hours</summary>
+            <ul>
+                <li>
+                    <p>Started at 8am</p>
+                    Started at 8am
+                </li>
+            </ul>
+            
+        </details>
+
+
+3. Flexbox
+
+.box{
+    background-color: aqua;
+     height: 50px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
+    
+}
+nav ul li{
+    list-style-type: none;
+    font-size: 1rem;
+    padding-right: 20px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+}
+
+.box{
+    background-color: #000;
+     height: 50px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
+    flex-wrap: wrap;
+    
+}
+
+

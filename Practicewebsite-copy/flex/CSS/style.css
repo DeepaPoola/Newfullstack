@@ -1,0 +1,85 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none; 
+    list-style-type: none;
+}
+
+
+body{
+    /*padding: 10px;*/
+    min-height: 100vh;
+    
+}
+
+.box{
+    background-color: #000;
+     height: 50px;
+    display: flex;
+    gap: 1rem;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    justify-content: flex-end;
+    align-items: end;
+    flex-flow: row wrap;
+    /*position: relative;*/
+  
+    
+}
+nav ul li{
+   
+    
+    font-size: 1rem;
+    padding-right: 20px;
+    
+    
+}
+nav ul li a{
+    color: whitesmoke;
+    
+    
+}
+
+
+
+@media screen and (min-width: 375px)
+{
+ .box{
+    background-color: blueviolet;
+ }
+ nav ul li {
+    cursor: pointer;
+ }
+  nav ul li a:hover{
+    background-color: rgb(255, 0, 166);
+    cursor: pointer;
+  }
+  body{
+    background-color: rgb(255, 0, 217);
+  }
+}
+
+
+
+@media screen and (min-width:992px)
+{
+ .box{
+    background-color: blueviolet;
+ }
+ nav ul li {
+    cursor: pointer;
+ }
+  nav ul li a:hover{
+    background-color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  body{
+    background-color: aqua;
+  }
+}
+
+
+
+
