@@ -5,26 +5,26 @@
 }
 
 body{
-   height: 100vh;
-  
+  width: 100%;
+   max-height: 80%;
+   max-width: 100%;
    /* background-image: linear-gradient(white,blue); */
    background-image: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),url("../images/restaurantlogo1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; 
 
- 
-
  /* background-color: linear;  */
-  
-  
 }
 
 nav{
   
-   
+   max-width: 100%;
+   min-height: 10%;
    /* background-color:wheat; */
    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+   /* position: fixed; */
+ 
 }
 
 nav ul{
@@ -35,6 +35,8 @@ nav ul{
   align-items: flex-end;
   /* gap: 1rem; */
   backdrop-filter: blur(3px);
+ 
+  position: fixed;
   
   
 }
@@ -49,8 +51,8 @@ nav li{
 }
 
 nav a{
-  height: 100%;
-  color:white;
+  max-height: 100%;
+  color:blueviolet;
   font-weight: bold;
   height: 100%;
   text-decoration: none;
@@ -83,7 +85,7 @@ nav li:nth-child(2){
 
 }
 nav img{
-  width: 70px;
+  max-width: 70px;
   height: 50px;
   padding-left: 5px;
 }
@@ -147,7 +149,7 @@ nav h1{
   position: absolute;
   top:0;
   left: 150px;
-  margin-left: 30px;
+  margin-left: 10px;
   box-shadow: 0 1px 1px rgba(0,0,0,1);
    /* background-color: rgba(255, 255, 255,0.8);
   backdrop-filter: blur(3px);  */
@@ -159,8 +161,6 @@ nav h1{
  .dropdown_menu ul li:hover .dropdown_menu1{
   display: flex;
   position: absolute;
-  
-  
   
  }
 /*.menu-icon{
@@ -196,25 +196,36 @@ nav h1{
  }*/
  .container{
 
-  height: 50%;
   display: flex;
   flex-direction: row;
-  width:100%;
+  max-width:100%;
   height: 100%;
  
  }
  .content1{
-  width: 50%;
+  max-width: 50%;
   height: 25%;
-  padding-top: 30px;
+  padding-top: 20px;
   color: white;
-   /* display: flex;
+  display: flex;
+  flex-direction: column;
+  
+   /* display: flx;
    align-items: flex-start;
    justify-content: flex-start;
    flex-flow: column nowrap; */
-   float: left;
+   /* float: left; */
    font-size: 20px;
    
+ }
+  .content2{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* padding-left: 580px;
+  padding-top: 30px; */
+  padding: 30px 40px;
  }
  .animate{
   /* animation-name: slide;
@@ -237,20 +248,20 @@ nav h1{
  }
  .content1 span p{
   display:flex;
-  flex-basis: row wrap;
+  flex-basis: row nowrap;
   /* align: justify; */
   text-justify: inter-character;
   padding-left: 20px;
  }
 
  .content1 h1{
-  padding-top: 100px;
+  padding-top: 50px;
   padding-left: 50px;
   font-size: 70px;
   font-style: oblique;
   font-weight: 100px;
  }
- .content1 img{
+ .content2 img{
   
   height: 80vh;
   position: relative;
@@ -337,4 +348,262 @@ nav h1{
 }
  */
 
+/* ***** about Us*****  */
 
+.container2{
+  width: 100%;
+  height: 350px;
+  /* margin-inline: auto; */
+  display: flex;
+  gap:1rem;
+  justify-content: space-around;
+  padding-top: 90px;
+  margin-top: 100px;
+ background-color:whitesmoke;
+ padding-bottom: 10px;
+ 
+}
+.card{
+  width: 23%;
+  
+  background-color:white;
+  
+  animation: slide 1s ease;
+ 
+}
+
+@keyframes slide{
+  0%{
+    transform: translateY(50%);
+  }
+}
+.card:hover{
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+  background-color: orange;
+  color: white;
+
+}
+.card1{
+  display: flex;
+}
+.card1 img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.card1 h2{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-decoration: underline;
+}
+.card p{
+  padding: 25px 10px;
+  text-align: justify;
+  
+  font-weight: 100px;
+  font-style: italic;
+}
+.card2{
+  display: flex;
+}
+
+.card2 img{
+  width: 200px;
+  height: 100px;
+  margin-left: -50px;
+  
+  
+}
+.card2 h2{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-decoration: underline;
+  margin-left: -50px;
+}
+
+.card3{
+  display: flex;
+}
+
+.card3 img{
+  width: 150px;
+  height: 100px;
+  
+  
+  
+}
+.card3 h2{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-decoration: underline;
+  margin-left: -10px;
+}
+
+.card4{
+  display: flex;
+}
+
+.card4 img{
+  width: 150px;
+  height: 100px;
+  
+  
+  
+}
+.card4 h2{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-decoration: underline;
+  margin-left: -10px;
+}
+
+.container3{
+ width: 100%;
+ display: flex;
+ margin-top: 150px;
+ 
+}
+.about{
+  width: 50%;
+  height: 50%;
+
+}
+.about1{
+  display: flex;
+ 
+ /* animation: zoom-in 1s cubic-bezier(0,0,0,0); */
+ 
+
+}
+@keyframes zoom-in {
+  0%{
+    /* transform: scale(-1); */
+    transform: scale(0.3); 
+  }
+}
+.about1 .image1{
+  /* width: 300px; */
+  height: 250px;
+  width: 40%;
+  margin-left: 10px;
+  transform: scaleY(120%);
+  animation: zoom-in 1s ease;
+}
+.about1 .image2{
+  /* width: 250px; */
+  width: 30%;
+  height: 200px;
+  margin-left: 20px;
+ margin-top: 75px;
+ animation: zoom-in 1s ease;
+
+/* margin-left: -40px; */
+/* 
+align-items: flex-end;
+justify-content: flex-end;  */
+} 
+.about2{
+  display: flex;
+  margin-top: 80px;
+}
+.about2 .image3{
+  width: 250px;
+  height: 250px;
+  margin-left: 60px;
+ margin-top: -60px;
+ animation: zoom-in 2s ease;
+
+/* margin-left: -40px; */
+/* 
+align-items: flex-end;
+justify-content: flex-end;  */
+}
+.about2 .image4{
+  width: 300px;
+  height: 250px;
+  transform: scaleY(120%);
+  margin-left: 20px;
+  margin-top: -40px;
+  animation: zoom-in 2s ease;
+} 
+.about3 {
+  width: 50%;
+  
+}
+.about3 h2{
+  font-family: "Brush script MT",cursive;
+   font-size: 40px;
+  color: orange;
+}
+.line{
+  display: flex;
+  
+}
+.line-1{
+  
+  width: 50px;
+  height: 3px;
+  background-color: orange;
+  align-items:center;
+  /* display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; */
+}
+
+.text{
+  font-size: 35px;
+  display: flex;
+}
+.text img{
+  width: 10%;
+  height: 80px;
+ 
+  
+  margin-top: -20px;
+ 
+}
+
+.about3 p{
+  padding-right: 10px;
+  /* align-content: justify; */
+  padding-bottom: 10px;
+  
+}
+
+
+/********* Media queries for responsive************/
+/* .menu-btn{
+  color: white;
+  position: absolute;
+  top:20px;
+  right:20px;
+  display:none;
+  width:30px;
+} */
+/* @media screen and (max-width:720px){
+  nav ul{
+    flex-direction: column;
+    background-color: gray;
+    position: absolute;
+    top:0;
+    right: -900px;
+    width: 80%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+  nav li{
+    text-align: left;
+    width: 100%;
+    padding: 100px 30px;
+    border-bottom: 1px solid white;
+  }
+  nav .active{
+    right:0;
+  }
+} */
