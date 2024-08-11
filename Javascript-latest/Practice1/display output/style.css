@@ -1,0 +1,16 @@
+.display{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.mybutton{
+    width: auto;
+   cursor: pointer;
+   background-color: blueviolet;
+   color: aliceblue;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1rem;
+}
