@@ -1,11 +1,11 @@
 
 // function Load(){
-//      let display=document.querySelectorAll(".display");
-//     let newinput=document.createElement("input")
+     
+//     const newinput=document.createElement("input")
 //     newinput.setAttribute("type","password")
 //     newinput.setAttribute("placeholder","password")
-    
-//     document.body.appendChild(newinput);
+//     newinput.classList="display1"
+//     document.display1.append(newinput);
     
    
 // }
@@ -16,16 +16,17 @@ function Submit(){
     //console.log(username)
 //    let user= document.getElementById("myh2");
 //    user.textContent+=`${username} has successfully logged in`
-let newinput=document.createElement("input")
-newinput.setAttribute("type","password")
-newinput.setAttribute("placeholder","password")
-
-document.body.appendChild(newinput);
 
 document.getElementById("myh2").textContent=`${username} has successfully logged in`
+document.getElementById('userName').value="";
+// let newinput=document.createElement("input")
+// newinput.setAttribute("type","password")
+// newinput.setAttribute("placeholder","password")
+// newinput.classList("display1")
+// document.display1.appendChild(newinput);
 
  //after submitting clear the input
-document.getElementById('userName').value="";
+
     // alert(`${username} has succussfully logged in`);
   
 }

@@ -1,0 +1,98 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+body{
+   background-image: url("./flower.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+ background-position: center;
+ /* min-height: 100vh;
+ width: 100%; */
+
+}
+
+.container{
+    width: 20%;
+   padding: 40px;
+   margin: auto;
+   margin-top: 10%;
+   /* background-image: url("./nature.jpg"); */
+     background-image: radial-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)), url(./nature.jpg);
+   background-position: right;
+   background-size: cover;
+ 
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  
+   
+}
+h1{
+    text-wrap: nowrap;
+    color: white;
+}
+input{
+    padding: 10px 40px;
+    margin: 10px;
+    border-radius: 10px;
+    /* border-bottom: 20px solid #fff;
+    background: transparent; 
+    border: none;
+    outline: none; */
+    /* color:#fff */
+      /* text-align: center; */
+    /* border:0;*/
+  
+}
+button{
+    padding: 15px;
+    font-size: 20px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    color: blueviolet;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+    color: blue;
+    
+}
+.input-icon .fas{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding:20px 30px;
+    font-size: 20px;
+    min-width: 40px;
+    color: blueviolet;
+   
+}
+/* .eye-icon .eye{
+    padding-top: 50px;
+    cursor: pointer;
+} */
+::placeholder{
+    /* padding-left: 10px; */
+    /* color: white; */
+    border-bottom: 2px solid #fff;
+}
+#myh2{
+    text-align: center;
+   color: pink;
+}
+#usermessage,#passwordmessage,#confirmmessage,#emailmessage,#mobilemessage{
+    color: red;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+
