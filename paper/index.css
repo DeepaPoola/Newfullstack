@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+#choices{
+    text-align: center;
+    
+}
+#choices button{
+    font-size: 80px;
+    margin: 20px;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}

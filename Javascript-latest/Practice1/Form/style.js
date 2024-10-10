@@ -4,6 +4,7 @@ function Submit(){
     let confirmpswd=document.getElementById("confirmpswd").value;
     let Email=document.getElementById("Email").value;
     let Mobile=document.getElementById("Mobile").value;
+    let demo=document.getElementById("demo")
     // let myh2= document.getElementById("myh2");
     let usermessage=document.getElementById("usermessage")
     let passwordmessage=document.getElementById("passwordmessage")
@@ -19,6 +20,7 @@ function Submit(){
     
     // myh2.textContent=`${username} has logged in`;
     
+
     if(username==""){
         usermessage.textContent="Please Enter user name"
         return false; 
@@ -99,11 +101,47 @@ function Submit(){
     mobilemessage.textContent=""
   }
   
-
-// document.getElementById("Username").value=""
-
   
+  
+// document.getElementById("Username").value=""
+// demo.textContent=`${username} has Registered Successfully`;
+// alert(`${username} has Registered Successfully`)
+preventDefault();
 }
+
+function myFunction()
+{
+  var Pswd=document.getElementById("Password");
+  if(Pswd.type === "password")
+  {
+    Pswd.type="text";
+    document.getElementById("show").style.display="inline-block"
+    document.getElementById("hide").style.display="none"
+  }
+  else{
+    Pswd.type="password";
+    document.getElementById("show").style.display="none"
+    document.getElementById("hide").style.display="inline-block"
+  }
+}
+function myFunction1()
+{
+  var Pswd=document.getElementById("confirmpswd");
+  if(Pswd.type === "password")
+  {
+    Pswd.type="text";
+    document.getElementById("show1").style.display="inline-block"
+    document.getElementById("hide1").style.display="none"
+  }
+  else{
+    Pswd.type="password";
+    document.getElementById("show1").style.display="none"
+    document.getElementById("hide1").style.display="inline-block"
+  }
+}
+
+
+
 
 
 

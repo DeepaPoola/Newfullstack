@@ -6,10 +6,12 @@ function canvote(age){
   return age>=18
 }*/
 
-var a=[10,15,18,20,22]
+// var a=[10,15,18,20,22]
+var a=[10,15,18,5]
 var c=a.reduce(canvote)
 console.log(c)
 
 function canvote(age){
   return age-1
+
 }
