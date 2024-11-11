@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+         <input readonly id="display" placeholder="CALCULATOR">
+        
+         <div class="numbers">
+            <div class="AC">
+            <button onclick="clearDisplay('AC')"class="AC" >AC</button>
+            <button onclick="deleteDisplay('Del')"class="Del">Del</button>
+            <button onclick="operatorDisplay('+')">+</button>
+            <button onclick="operatorDisplay('/')">/</button>
+           </div>
+           <div>
+            <button onclick="operatorDisplay('7')">7</button>
+            <button onclick="operatorDisplay('8')">8</button>
+            <button onclick="operatorDisplay('9')">9</button>
+            <button onclick="operatorDisplay('*')">*</button>
+          </div>
+          <div>
+            <button onclick="operatorDisplay('4')">4</button>
+            <button onclick="operatorDisplay('5')">5</button>
+            <button onclick="operatorDisplay('6')">6</button>
+            <button onclick="operatorDisplay('-')">-</button>
+         </div>
+         <div>
+            <button onclick="operatorDisplay('1')">1</button>
+            <button onclick="operatorDisplay('2')">2</button>
+            <button onclick="operatorDisplay('3')">3</button>
+            <button onclick="operatorDisplay('+')">+</button>
+        </div>
+         <div>
+            <button onclick="operatorDisplay('%')">%</button>
+            <button onclick="operatorDisplay('0')">0</button>
+            <button onclick="operatorDisplay('.')">.</button>
+            <button onclick="calculate('=')"class="answer">=</button>
+         </div>
+           
+         </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

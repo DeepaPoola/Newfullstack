@@ -1,0 +1,60 @@
+body{
+   max-width: 100%;
+    height: 100%;
+    background-image: url("../flower.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.container{
+    /* display: flex;
+    flex-direction: column;
+    center; align-items:
+    text-align: center; */
+    max-width: 300px;
+   background-color: wheat;
+   margin:150px auto;
+
+  
+}
+input{
+    width: 98%;
+    line-height: 60px;
+    
+}
+input::placeholder{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+.numbers{
+    padding: 10px;
+
+}
+
+.numbers .AC button {
+    padding: 10px;
+    
+}
+.numbers button{
+    width: 50px;
+    height: 50px;
+    padding:10px;
+    margin: 5px;
+    border-radius: 50px;
+    background-color: black;
+    color: aliceblue;
+   
+}
+.AC .AC{
+    background-color: red;
+
+}
+.AC .Del{
+    background-color: red;
+}
+.numbers .answer{
+    background-color: green;
+}

@@ -1,4 +1,4 @@
-var employee={id:10,name:"deepa",salary:20000}
+var employee=[{id:10,name:"deepa",salary:20000},{id:20,name:"sunny",salary:30000}]
 console.log(employee)
 console.log(employee.id)
 console.log(Object.keys(employee))

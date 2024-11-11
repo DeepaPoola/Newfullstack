@@ -580,18 +580,36 @@ footer .copyright{
   margin-right: 50px;
 }
 
-.small-img-group{
+.images{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.small-img-col{
+.single-pro-image img{
+    width: 80%;
+}
+
+.small-img-group{
+    display: flex;
+    /* justify-content: space-between; */
+    /* padding: 0;
+    margin-right: 10px;
+    gap:0; */
+}
+
+/* .small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+} */
+
+.small-img-col img{
+    width: 100px;
     flex-basis: 24%;
     cursor: pointer;
 }
 
 #prodetails .single-pro-details{
-    width: 50%;
+    width: 80%;
     padding-top: 30px;
 }
 

@@ -36,16 +36,16 @@
             </div>
               <div class="small-img-group">
                   <div class="small-img-col">
-                      <img src="./images/products/f1.jpg"  class="small-img" alt="">
+                      <img src="./images/products/f1.jpg" width="100%" class="small-img" alt="">
                   </div>
                   <div class="small-img-col">
-                   <img src="./images/products/f2.jpg"  class="small-img" alt="">
+                   <img src="./images/products/f2.jpg" width="100%" class="small-img" alt="">
                   </div>
                <div class="small-img-col">
-                   <img src="./images/products/f3.jpg"  class="small-img" alt="">
+                   <img src="./images/products/f3.jpg" width="100%" class="small-img" alt="">
                </div>
                <div class="small-img-col">
-                   <img src="./images/products/f4.jpg"  class="small-img" alt="">
+                   <img src="./images/products/f4.jpg" width="100%" class="small-img" alt="">
                </div>
               </div>
       </div>
@@ -55,7 +55,7 @@
          <div class="single-pro-details">
             <h6>Home / T-Shirts</h6>
             <h4>Men's Fashoion T Shirt</h4>
-            <h2 id="pricedetails">$139</h2>
+            <h2>$139</h2>
             <select>
                 <option>Select size</option>
                 <option>XL</option>
@@ -209,83 +209,67 @@
        const products=[
          {
          id:1,
-         image:'./images/products/f1.jpg',
-         price:'$78'
+         image:'./images/products/f1.jpg'
        },
        {
          id:2,
-         image:'./images/products/f2.jpg',
-         price:'$78'
+         image:'./images/products/f2.jpg'
        },
        {
          id:3,
-         image:'./images/products/f3.jpg',
-         price:'$78'
+         image:'./images/products/f3.jpg'
        },
        {
          id:4,
-         image:'./images/products/f4.jpg',
-         price:'$78'
+         image:'./images/products/f4.jpg'
        },
        {
          id:5,
-         image:'./images/products/f5.jpg',
-         price:'$78'
+         image:'./images/products/f5.jpg'
        },
        {
          id:6,
-         image:'./images/products/f6.jpg',
-         price:'$78'
+         image:'./images/products/f6.jpg'
        },
        {
          id:7,
-         image:'./images/products/f7.jpg',
-         price:'$78'
+         image:'./images/products/f7.jpg'
        },
        {
          id:8,
-         image:'./images/products/f8.jpg',
-         price:'$78'
+         image:'./images/products/f8.jpg'
        },
        {
          id:9,
-         image:'./images/products/n1.jpg',
-         price:'$78'
+         image:'./images/products/n1.jpg'
        },
        {
          id:10,
-         image:'./images/products/n2.jpg',
-         price:'$78'
+         image:'./images/products/n2.jpg'
        },
        {
          id:11,
-         image:'./images/products/n3.jpg',
-         price:'$78'
+         image:'./images/products/n3.jpg'
        },
        {
          id:12,
-         image:'./images/products/n4.jpg',
-         price:'$78'
+         image:'./images/products/n4.jpg'
        },
        {
          id:13,
-         image:'./images/products/n5.jpg',
-         price:'$78'
+         image:'./images/products/n5.jpg'
        },
        {
          id:14,
-         image:'./images/products/n6.jpg',
-         price:'$78'
+         image:'./images/products/n6.jpg'
        },
        {
          id:15,
-         image:'./images/products/n7.jpg',
-         price:'$78'
+         image:'./images/products/n7.jpg'
        },
        {
          id:16,
-         image:'./images/products/n8.jpg',
-         price:'$78'
+         image:'./images/products/n8.jpg'
        }
       ]
 
@@ -295,11 +279,8 @@
       //  console.log(product.image)
       
        document.getElementById('product-image').src=product.image;
-       document.getElementById('pricedetails').textContent=`${product.price}`
        var MainImg=document.getElementById("product-image");
         var smallimg=document.getElementsByClassName("small-img");
-    
-
 
         smallimg[0].onclick=function(){
             MainImg.src=smallimg[0].src;
