@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    background: #E3E6F3;
+  
+}
+
+#header .logo{
+    max-width: 30%;
+    
+}
+
+
+
+
+#navbar{
+    display: flex;
+  
+   
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar li a{
+    text-decoration: none;
+}
