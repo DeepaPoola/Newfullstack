@@ -1,19 +1,29 @@
-import React,{useEffect,useState} from 'react'
+import React,{useEffect,useLayoutEffect,useMemo,useState} from 'react'
 
 import Axios from 'axios'
 
 const Effecthook = () => {
     const [products,setProducts]=useState([])
-    useEffect(()=>{
-  (async()=>{
-   let response=await Axios.get('https://jsonplaceholder.typicode.com/users')
+    useLayoutEffect(()=>{
+      (async()=>{
+       let response=await Axios.get('https://jsonplaceholder.typicode.com/users')
+      
+        console.log( response.data)
+        setProducts(response.data)
+        
+    })()
+        
+       },[])
+//     useEffect(()=>{
+//   (async()=>{
+//    let response=await Axios.get('https://jsonplaceholder.typicode.com/users')
   
-    console.log( response.data)
-    setProducts(response.data)
+//     console.log( response.data)
+//     setProducts(response.data)
     
-})()
+// })()
     
-   },[])
+//    },[])
 
 
   return (
