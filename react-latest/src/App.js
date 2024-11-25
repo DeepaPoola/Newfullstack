@@ -9,7 +9,7 @@ import Callhook from './Components/hooks/usecallback/Callhook'
 import CompA from './Components/hooks/useContext/CompA'
 import Message from './Redux/Message/Message'
 import Product from './Redux/Product/Product'
-import Task from './Todolist/Task'
+import Task from './Todo/Task'
 
 // import CompA from './Components/props/CompA'
 // import CompB from './Components/props/CompB'
