@@ -3,7 +3,11 @@ import Shop from './Shop'
 import ProductListPage from './pages/ProductListPage/ProductListPage'
 import ShopApplicationWrapper from "./pages/ShopApplicationWrapper";
 import ProductDetails from './pages/ProductDetailPage/ProductDetails'
-import {loadProductById} from './routes/products'
+import {loadProductBySlug} from './routes/products'
+import AuthenticationWrapper from "./pages/AuthenticationWrapper";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import OAuth2LoginCallback from "./pages/OAuth2LoginCallback"
 
 export const router = createBrowserRouter([
     {
@@ -28,10 +32,28 @@ export const router = createBrowserRouter([
         },
         {
           path:"/product/:productId",
-          loader:loadProductById,
+          loader:loadProductBySlug,
           element:<ProductDetails />
         }
       ]
+    },
+    {
+      path:"/v1/",
+      element:<AuthenticationWrapper/>,
+      children:[
+         {
+           path:"login",
+           element:<Login/>
+         },
+         {
+          path:"register",
+          element:<Register/>
+        }
+      ]
+    },
+    {
+      path:'/oauth2/callback',
+      element:<OAuth2LoginCallback/>
     }
   
   ]);

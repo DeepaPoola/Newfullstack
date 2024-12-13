@@ -6,15 +6,21 @@ import reportWebVitals from './reportWebVitals';
 import 'react-multi-carousel/lib/styles.css';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes';
+import store from './components/store/store';
+import {Provider} from 'react-redux'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+    <Provider store={store}>
   <RouterProvider router={router}>
       
     
       <ShopApplicationWrapper />
 
 </RouterProvider>
+</Provider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
