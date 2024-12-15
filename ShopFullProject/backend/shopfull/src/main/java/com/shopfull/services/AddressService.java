@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 import com.shopfull.auth.entity.User;
-import com.shopfull.dto.AddressRequestDto;
+import com.shopfull.dto.AddressRequest;
 import com.shopfull.entities.Address;
 import com.shopfull.repositories.AddressRepository;
 
@@ -23,7 +23,7 @@ public class AddressService {
     @Autowired
     private AddressRepository addressRepository;
 
-    public Address createAddress(AddressRequestDto addressRequest, Principal principal){
+    public Address createAddress(AddressRequest addressRequest, Principal principal){
         User user= (User) userDetailsService.loadUserByUsername(principal.getName());
         Address address = Address.builder()
                 .name(addressRequest.getName())

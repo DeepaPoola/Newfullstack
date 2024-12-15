@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.shopfull.auth.entity.User;
 
 @Repository
-public interface UserDetailRepository extends JpaRepository<User, UUID> {
-
-	User findByEmail(String username);
-
+public interface UserDetailRepository extends JpaRepository<User,UUID> {
+    User findByEmail(String username);
 }

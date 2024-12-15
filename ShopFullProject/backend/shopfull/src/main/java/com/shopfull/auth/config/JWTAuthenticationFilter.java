@@ -16,51 +16,44 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class JWTAuthenticationFilter extends OncePerRequestFilter {
-	
-	private final UserDetailsService userDetailsService ;
-	 @Autowired
-	    private JWTTokenHelper jwtTokenHelper;
-	
-	public JWTAuthenticationFilter(JWTTokenHelper jwtTokenHelper,UserDetailsService userDetailsService) {
-		this.userDetailsService = userDetailsService;
-		this.jwtTokenHelper = jwtTokenHelper;
-	}
 
-	@Override
-	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		String authHeader = request.getHeader("Authorization");
-		
-		if(null == authHeader || !authHeader.startsWith("Bearer"))
-		{
-			filterChain.doFilter(request, response);
-			return;
-		}
+    private final UserDetailsService userDetailsService;
+    private final JWTTokenHelper jwtTokenHelper;
 
-        try{
-            String authToken = jwtTokenHelper.getToken(request);
-            if(null != authToken){
-                String userName = jwtTokenHelper.getUserNameFromToken(authToken);
-                if(null != userName){
-                    UserDetails userDetails= userDetailsService.loadUserByUsername(userName);
+    public JWTAuthenticationFilter(JWTTokenHelper jwtTokenHelper,UserDetailsService userDetailsService) {
+        this.jwtTokenHelper = jwtTokenHelper;
+        this.userDetailsService = userDetailsService;
+    }
 
-                    if(jwtTokenHelper.validateToken(authToken,userDetails)) {
-                        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
-                        authenticationToken.setDetails(new WebAuthenticationDetails(request));
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-                        SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-                    }
-                }
+            String authHeader = request.getHeader("Authorization");
 
+            if(null == authHeader || !authHeader.startsWith("Bearer")){
+                filterChain.doFilter(request,response);
+                return;
             }
-            filterChain.doFilter(request, response);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }}
-		
-	}
-	
-	
 
+            try{
+                String authToken = jwtTokenHelper.getToken(request);
+                if(null != authToken){
+                    String userName = jwtTokenHelper.getUserNameFromToken(authToken);
+                    if(null != userName){
+                        UserDetails userDetails= userDetailsService.loadUserByUsername(userName);
 
+                        if(jwtTokenHelper.validateToken(authToken,userDetails)) {
+                            UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+                            authenticationToken.setDetails(new WebAuthenticationDetails(request));
+
+                            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+                        }
+                    }
+
+                }
+                filterChain.doFilter(request, response);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+    }
+}

@@ -23,7 +23,7 @@ import com.shopfull.dto.OrderRequest;
 import com.shopfull.services.OrderService;
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/api/order")
 @CrossOrigin
 public class OrderController {
 

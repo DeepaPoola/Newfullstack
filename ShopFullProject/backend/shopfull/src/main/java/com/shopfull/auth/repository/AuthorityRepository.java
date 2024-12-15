@@ -9,7 +9,5 @@ import com.shopfull.auth.entity.Authority;
 
 @Repository
 public interface AuthorityRepository extends JpaRepository<Authority, UUID> {
-
-	Authority findByRoleCode(String string);
-
+    Authority findByRoleCode(String user);
 }

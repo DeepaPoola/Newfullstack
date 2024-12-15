@@ -15,8 +15,8 @@ import com.shopfull.auth.dto.UserDetailsDto;
 import com.shopfull.auth.entity.User;
 
 @RestController
-@RequestMapping("/user")
 @CrossOrigin
+@RequestMapping("/user")
 public class UserDetailController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class UserDetailController {
     public ResponseEntity<UserDetailsDto> getUserProfile(Principal principal){
         User user = (User) userDetailsService.loadUserByUsername(principal.getName());
 
-        if(null == user) {
+        if(null == user){
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
 
@@ -36,7 +36,7 @@ public class UserDetailController {
                 .email(user.getEmail())
                 .id(user.getId())
                 .phoneNumber(user.getPhoneNumber())
-//                .addressList(user.getAddressList())
+                .addressList(user.getAddressList())
                 .authorityList(user.getAuthorities().toArray()).build();
 
         return new ResponseEntity<>(userDetailsDto, HttpStatus.OK);
