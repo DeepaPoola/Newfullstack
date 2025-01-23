@@ -10,6 +10,12 @@ h1{
     margin: 20px;
 }
 
+#choices img{
+    width: 80px;
+    object-fit: cover;
+   
+}
+
 p{
     text-align: center;
     font-size: 25px;
